@@ -93,6 +93,13 @@ input[type=text]{font:inherit;width:100%;padding:14px;border-radius:14px;border:
 </style>
 </head>
 <body>
+  <script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
+  </script>
 <main>
   <section id="vHome">
     <header>
@@ -565,5 +572,12 @@ input.onkeydown = function(e){ if (e.key === "Enter") $("saveBtn").click(); };
   window.addEventListener("online", function(){ toast("Back online 🌐"); });
 })();
 </script>
+  <script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
+  </script>
 </body>
 </html>
